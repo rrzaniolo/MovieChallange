@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallange.domain
+package com.rrzaniolo.movieapichallange.domain.repositories
 
 import com.rrzaniolo.movieapichallange.data.models.GetMovieResponse
 import com.rrzaniolo.movieapichallange.data.models.MovieResponse
