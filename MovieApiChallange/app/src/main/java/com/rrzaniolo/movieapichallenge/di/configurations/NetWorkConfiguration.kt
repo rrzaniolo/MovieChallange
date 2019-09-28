@@ -1,7 +1,7 @@
-package com.rrzaniolo.movieapichallange.di.configurations
+package com.rrzaniolo.movieapichallenge.di.configurations
 
-import com.rrzaniolo.movieapichallange.BuildConfig
-import com.rrzaniolo.movieapichallange.data.apis.MovieApi
+import com.rrzaniolo.movieapichallenge.BuildConfig
+import com.rrzaniolo.movieapichallenge.data.apis.MovieApi
 import com.squareup.moshi.Moshi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

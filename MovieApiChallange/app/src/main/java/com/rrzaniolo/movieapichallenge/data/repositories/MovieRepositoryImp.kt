@@ -1,11 +1,11 @@
-package com.rrzaniolo.movieapichallange.data.repositories
+package com.rrzaniolo.movieapichallenge.data.repositories
 
-import com.rrzaniolo.movieapichallange.BuildConfig
-import com.rrzaniolo.movieapichallange.data.apis.MovieApi
-import com.rrzaniolo.movieapichallange.data.models.GetMovieResponse
-import com.rrzaniolo.movieapichallange.data.models.MovieResponse
-import com.rrzaniolo.movieapichallange.di.configurations.Database
-import com.rrzaniolo.movieapichallange.domain.repositories.MovieRepository
+import com.rrzaniolo.movieapichallenge.BuildConfig
+import com.rrzaniolo.movieapichallenge.data.apis.MovieApi
+import com.rrzaniolo.movieapichallenge.data.models.GetMovieResponse
+import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
+import com.rrzaniolo.movieapichallenge.di.configurations.Database
+import com.rrzaniolo.movieapichallenge.domain.repositories.MovieRepository
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single

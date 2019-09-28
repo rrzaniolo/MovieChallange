@@ -1,6 +1,6 @@
-package com.rrzaniolo.movieapichallange.domain.repositories
+package com.rrzaniolo.movieapichallenge.domain.repositories
 
-import com.rrzaniolo.movieapichallange.data.models.GenreResponse
+import com.rrzaniolo.movieapichallenge.data.models.GenreResponse
 import io.reactivex.Flowable
 
 /**

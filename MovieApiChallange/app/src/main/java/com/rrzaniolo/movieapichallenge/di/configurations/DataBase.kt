@@ -1,9 +1,9 @@
-package com.rrzaniolo.movieapichallange.di.configurations
+package com.rrzaniolo.movieapichallenge.di.configurations
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.rrzaniolo.movieapichallange.data.daos.MovieDao
-import com.rrzaniolo.movieapichallange.data.models.MovieResponse
+import com.rrzaniolo.movieapichallenge.data.daos.MovieDao
+import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
 
 /**
  * Created by Rodrigo Rodrigues Zaniolo on 9/28/2019.

@@ -1,10 +1,10 @@
-package com.rrzaniolo.movieapichallange.presentation.base
+package com.rrzaniolo.movieapichallenge.presentation.base
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
-import com.rrzaniolo.movieapichallange.R
+import com.rrzaniolo.movieapichallenge.R
 
 /**
  * Created by Rodrigo Rodrigues Zaniolo on 9/28/2019.

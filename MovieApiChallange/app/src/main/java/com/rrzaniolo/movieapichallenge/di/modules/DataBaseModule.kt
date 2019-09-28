@@ -1,6 +1,6 @@
-package com.rrzaniolo.movieapichallange.di.modules
+package com.rrzaniolo.movieapichallenge.di.modules
 
-import com.rrzaniolo.movieapichallange.di.configurations.provideDataBaseBuilder
+import com.rrzaniolo.movieapichallenge.di.configurations.provideDataBaseBuilder
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 

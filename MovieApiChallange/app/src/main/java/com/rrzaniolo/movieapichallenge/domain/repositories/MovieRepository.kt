@@ -1,7 +1,7 @@
-package com.rrzaniolo.movieapichallange.domain.repositories
+package com.rrzaniolo.movieapichallenge.domain.repositories
 
-import com.rrzaniolo.movieapichallange.data.models.GetMovieResponse
-import com.rrzaniolo.movieapichallange.data.models.MovieResponse
+import com.rrzaniolo.movieapichallenge.data.models.GetMovieResponse
+import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single

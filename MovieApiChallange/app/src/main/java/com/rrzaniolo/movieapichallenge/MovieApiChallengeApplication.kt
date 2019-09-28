@@ -1,8 +1,8 @@
-package com.rrzaniolo.movieapichallange
+package com.rrzaniolo.movieapichallenge
 
 import android.app.Application
-import com.rrzaniolo.movieapichallange.di.modules.dataBaseModule
-import com.rrzaniolo.movieapichallange.di.modules.netWorkModule
+import com.rrzaniolo.movieapichallenge.di.modules.dataBaseModule
+import com.rrzaniolo.movieapichallenge.di.modules.netWorkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

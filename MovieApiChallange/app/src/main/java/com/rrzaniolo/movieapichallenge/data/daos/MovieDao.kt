@@ -1,10 +1,10 @@
-package com.rrzaniolo.movieapichallange.data.daos
+package com.rrzaniolo.movieapichallenge.data.daos
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.rrzaniolo.movieapichallange.data.models.MovieResponse
+import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single

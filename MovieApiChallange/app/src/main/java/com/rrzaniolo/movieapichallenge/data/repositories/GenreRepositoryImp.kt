@@ -1,9 +1,9 @@
-package com.rrzaniolo.movieapichallange.data.repositories
+package com.rrzaniolo.movieapichallenge.data.repositories
 
-import com.rrzaniolo.movieapichallange.BuildConfig
-import com.rrzaniolo.movieapichallange.data.apis.MovieApi
-import com.rrzaniolo.movieapichallange.data.models.GenreResponse
-import com.rrzaniolo.movieapichallange.domain.repositories.GenreRepository
+import com.rrzaniolo.movieapichallenge.BuildConfig
+import com.rrzaniolo.movieapichallenge.data.apis.MovieApi
+import com.rrzaniolo.movieapichallenge.data.models.GenreResponse
+import com.rrzaniolo.movieapichallenge.domain.repositories.GenreRepository
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

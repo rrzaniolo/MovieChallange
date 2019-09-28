@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallange.di.configurations
+package com.rrzaniolo.movieapichallenge.di.configurations
 
 import android.content.Context
 import androidx.room.Room

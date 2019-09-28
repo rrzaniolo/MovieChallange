@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallange.presentation.base
+package com.rrzaniolo.movieapichallenge.presentation.base
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel

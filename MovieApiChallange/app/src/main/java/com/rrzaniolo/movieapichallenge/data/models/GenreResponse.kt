@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallange.data.models
+package com.rrzaniolo.movieapichallenge.data.models
 
 import com.squareup.moshi.Json
 

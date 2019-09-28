@@ -1,7 +1,7 @@
-package com.rrzaniolo.movieapichallange.data.apis
+package com.rrzaniolo.movieapichallenge.data.apis
 
-import com.rrzaniolo.movieapichallange.data.models.GenreResponse
-import com.rrzaniolo.movieapichallange.data.models.GetMovieResponse
+import com.rrzaniolo.movieapichallenge.data.models.GenreResponse
+import com.rrzaniolo.movieapichallenge.data.models.GetMovieResponse
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query

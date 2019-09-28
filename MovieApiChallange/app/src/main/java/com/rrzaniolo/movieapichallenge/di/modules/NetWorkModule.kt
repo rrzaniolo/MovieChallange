@@ -1,6 +1,6 @@
-package com.rrzaniolo.movieapichallange.di.modules
+package com.rrzaniolo.movieapichallenge.di.modules
 
-import com.rrzaniolo.movieapichallange.di.configurations.provideMovieApi
+import com.rrzaniolo.movieapichallenge.di.configurations.provideMovieApi
 import org.koin.dsl.module
 
 /**

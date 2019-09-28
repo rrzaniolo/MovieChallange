@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallange.presentation.base
+package com.rrzaniolo.movieapichallenge.presentation.base
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

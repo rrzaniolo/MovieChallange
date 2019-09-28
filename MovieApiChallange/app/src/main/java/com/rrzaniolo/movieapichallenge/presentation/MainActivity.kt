@@ -1,14 +1,14 @@
-package com.rrzaniolo.movieapichallange.presentation
+package com.rrzaniolo.movieapichallenge.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.rrzaniolo.movieapichallange.R
+import com.rrzaniolo.movieapichallenge.R
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        setContentView(R.layout.view_main)
 
     }
 
