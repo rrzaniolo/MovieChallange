@@ -1,7 +1,8 @@
 package com.rrzaniolo.movieapichallange
 
 import android.app.Application
-import com.rrzaniolo.movieapichallange.di.netWorkModule
+import com.rrzaniolo.movieapichallange.di.modules.dataBaseModule
+import com.rrzaniolo.movieapichallange.di.modules.netWorkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -19,7 +20,7 @@ class MovieApiChallengeApplication : Application() {
     private fun initKoin() {
         startKoin {
             androidContext(this@MovieApiChallengeApplication)
-            modules(listOf(netWorkModule))
+            modules(listOf(netWorkModule, dataBaseModule))
         }
     }
 }

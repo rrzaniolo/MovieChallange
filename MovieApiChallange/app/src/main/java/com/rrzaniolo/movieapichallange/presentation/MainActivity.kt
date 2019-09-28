@@ -1,7 +1,8 @@
-package com.rrzaniolo.movieapichallange
+package com.rrzaniolo.movieapichallange.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.rrzaniolo.movieapichallange.R
 
 class MainActivity : AppCompatActivity() {
 
