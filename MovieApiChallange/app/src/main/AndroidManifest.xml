@@ -5,6 +5,7 @@
     package="com.rrzaniolo.movieapichallenge">
 
     <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="false"

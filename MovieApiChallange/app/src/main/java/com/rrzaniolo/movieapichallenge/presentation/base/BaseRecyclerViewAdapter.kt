@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
  * All rights reserved.
  */
 abstract class BaseRecyclerAdapter<T : BaseRecyclerAdapter.BaseRecyclerItem>:
-    RecyclerView.Adapter<BaseRecyclerAdapter.BaseRecyclerViewHolder>() {
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var listener: OnItemClickListener? = null
     var dataList: ArrayList<T> = ArrayList()
@@ -43,12 +43,6 @@ abstract class BaseRecyclerAdapter<T : BaseRecyclerAdapter.BaseRecyclerItem>:
 
     interface OnItemClickListener {
         fun onItemClick(view: View, position: Int)
-    }
-
-
-    abstract class BaseRecyclerViewHolder(private val itemView: View): RecyclerView.ViewHolder(itemView){
-
-        abstract fun onBind(data: BaseRecyclerItem)
     }
 
     abstract class BaseRecyclerItem

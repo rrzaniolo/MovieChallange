@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">MovieApiChallange</string>
+    <string name="app_name">MovieApiChallenge</string>
+
+    <!-- General -->
+    <string name="errorTitle">Erro</string>
+    <string name="errorMessage">Ops! Tivemos um problema com a sua requisição.</string>
+    <string name="tryAgain">Tentar novamente</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancelar</string>
+
+    <!-- Main View -->
+    <string name="home">Home</string>
+    <string name="favorites">Favoritos</string>
+
+    <!-- Home -->
+    <string name="movie_subtitle">%1$s\n%2$s</string>
 </resources>

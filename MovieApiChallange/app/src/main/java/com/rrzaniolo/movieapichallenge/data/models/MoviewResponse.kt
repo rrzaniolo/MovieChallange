@@ -4,6 +4,7 @@ import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import com.rrzaniolo.movieapichallenge.presentation.base.BaseRecyclerAdapter
 import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
 
@@ -44,6 +45,6 @@ data class MovieResponse(
     @field:Json(name = "video") var video: Boolean?,
     @field:Json(name = "vote_average") var voteAverage: Double,
     @field:Json(name = "vote_count") var voteCount: Int
-) : Parcelable {
+) : Parcelable, BaseRecyclerAdapter.BaseRecyclerItem() {
     constructor() : this(false, "", null, 0, "", "", "", 0.0, "", "", "", false, 0.0, 0)
 }
