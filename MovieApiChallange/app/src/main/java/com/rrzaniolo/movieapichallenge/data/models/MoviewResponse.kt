@@ -44,7 +44,8 @@ data class MovieResponse(
     @field:Json(name = "title") var title: String?,
     @field:Json(name = "video") var video: Boolean?,
     @field:Json(name = "vote_average") var voteAverage: Double,
-    @field:Json(name = "vote_count") var voteCount: Int
+    @field:Json(name = "vote_count") var voteCount: Int,
+    @field:Json(name = "isLiked") var isLiked: Boolean
 ) : Parcelable, BaseRecyclerAdapter.BaseRecyclerItem() {
-    constructor() : this(false, "", null, 0, "", "", "", 0.0, "", "", "", false, 0.0, 0)
+    constructor() : this(false, "", null, 0, "", "", "", 0.0, "", "", "", false, 0.0, 0, false)
 }

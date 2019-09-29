@@ -1,7 +1,10 @@
 package com.rrzaniolo.movieapichallenge.presentation.base
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.View
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.rrzaniolo.movieapichallenge.R
@@ -40,5 +43,16 @@ fun String.toDate(): String? {
 
     return fromDate.parse(this)?.let { date ->
         toDate.format(date)
+    }
+}
+
+fun Drawable.tint(@ColorInt color: Int): Drawable{
+    this.setTint(color)
+    return  this
+}
+
+fun Drawable.tint(@ColorRes colorId: Int, context: Context): Drawable{
+    ContextCompat.getColor(context, colorId).also {
+        return this.tint(it)
     }
 }

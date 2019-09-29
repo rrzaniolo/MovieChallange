@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallenge.presentation
+package com.rrzaniolo.movieapichallenge.presentation.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

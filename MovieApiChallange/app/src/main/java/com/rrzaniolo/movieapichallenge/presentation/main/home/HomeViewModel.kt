@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallenge.presentation.home
+package com.rrzaniolo.movieapichallenge.presentation.main.home
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData

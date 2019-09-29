@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallenge.presentation
+package com.rrzaniolo.movieapichallenge.presentation.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +22,10 @@ class MovieListAdapter: BaseRecyclerAdapter<MovieResponse>() {
     var genreList: GenreResponse? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_view_movie, parent, false), listener)
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_view_movie, parent, false),
+            listener
+        )
     }
 
     override fun getItemCount(): Int {

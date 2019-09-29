@@ -1,4 +1,4 @@
-package com.rrzaniolo.movieapichallenge.presentation.home
+package com.rrzaniolo.movieapichallenge.presentation.main.home
 
 import com.rrzaniolo.movieapichallenge.data.models.GenreResponse
 import com.rrzaniolo.movieapichallenge.data.models.MovieResponse

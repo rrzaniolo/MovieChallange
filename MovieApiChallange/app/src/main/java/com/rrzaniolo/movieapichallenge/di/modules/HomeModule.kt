@@ -5,7 +5,7 @@ import com.rrzaniolo.movieapichallenge.data.repositories.MovieRepositoryImp
 import com.rrzaniolo.movieapichallenge.domain.repositories.GenreRepository
 import com.rrzaniolo.movieapichallenge.domain.repositories.MovieRepository
 import com.rrzaniolo.movieapichallenge.domain.usecase.HomeUseCase
-import com.rrzaniolo.movieapichallenge.presentation.home.HomeViewModel
+import com.rrzaniolo.movieapichallenge.presentation.main.home.HomeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module

@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toTopOf="@id/movieSubtitle"
         app:layout_constraintStart_toEndOf="@id/movieImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="Movie Name"
         style="@style/TextView.MovieTitle"/>
 

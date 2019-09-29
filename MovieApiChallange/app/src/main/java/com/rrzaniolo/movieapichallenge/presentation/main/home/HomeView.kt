@@ -1,10 +1,10 @@
-package com.rrzaniolo.movieapichallenge.presentation.home
+package com.rrzaniolo.movieapichallenge.presentation.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -14,10 +14,11 @@ import com.rrzaniolo.movieapichallenge.R
 import com.rrzaniolo.movieapichallenge.data.models.GenreResponse
 import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
 import com.rrzaniolo.movieapichallenge.di.modules.loadHomeModule
-import com.rrzaniolo.movieapichallenge.presentation.MovieListAdapter
 import com.rrzaniolo.movieapichallenge.presentation.base.BaseRecyclerAdapter
 import com.rrzaniolo.movieapichallenge.presentation.base.isVisible
 import com.rrzaniolo.movieapichallenge.presentation.base.showErrorDialog
+import com.rrzaniolo.movieapichallenge.presentation.detail.DetailView
+import com.rrzaniolo.movieapichallenge.presentation.main.MovieListAdapter
 import kotlinx.android.synthetic.main.view_home.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -55,6 +56,7 @@ class HomeView : Fragment(), BaseRecyclerAdapter.OnItemClickListener{
 
     private fun initViewModel(){
         viewModel.homeViewState.observe(this, Observer{viewState ->
+            hideLoading()
             when(viewState){
                 is HomeViewState.ShowSuccess -> showSuccess(viewState.movies, viewState.genres)
                 is HomeViewState.ShowError -> showError()
@@ -97,7 +99,9 @@ class HomeView : Fragment(), BaseRecyclerAdapter.OnItemClickListener{
     }
 
     override fun onItemClick(view: View, position: Int) {
-        //TODO - Go to movie details activity.
-        Toast.makeText(context, "Feature under development", Toast.LENGTH_LONG).show()
+        Intent(activity, DetailView::class.java).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT).apply {
+            this.putExtra(DetailView.MOVIE_DATA,  movieListAdapter.dataList[position])
+            startActivity(this)
+        }
     }
 }

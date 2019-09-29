@@ -9,4 +9,5 @@
     <color name="darkBlueGrey">#FF6B5CA5</color>
     <color name="veryLightAzure">#FF71A9F7</color>
     <color name="periwinkle">#FFC6D8FF</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>

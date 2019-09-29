@@ -3,6 +3,7 @@ package com.rrzaniolo.movieapichallenge.presentation.base
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.LifecycleOwner
 import com.rrzaniolo.movieapichallenge.R
 
@@ -24,6 +25,7 @@ abstract class BaseView: AppCompatActivity(), LifecycleOwner {
                 R.anim.anim_slide_out_left
             )
         }
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
     }
 
     override fun onStart() {
