@@ -12,5 +12,4 @@ open class HomeViewState {
 
     object ShowError: HomeViewState()
     object ShowLoading: HomeViewState()
-    object HideLoading: HomeViewState()
 }

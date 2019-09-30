@@ -40,11 +40,9 @@ class DetailViewModel(private val useCase: DetailUseCase): BaseViewModel() {
             _detailViewState.postValue(DetailViewStates.ShowLoading)
             disposableTask.add(useCase.getMovie(movie).subscribe(
                 {
-//                    _detailViewState.postValue(DetailViewStates.HideLoading)
                     _detailViewState.postValue(DetailViewStates.GetMovieSuccess(it))
                 },
                 {
-//                    _detailViewState.postValue(DetailViewStates.HideLoading)
                     _detailViewState.postValue(DetailViewStates.GetMovieSuccess(movie))
                 }
             ))
@@ -52,21 +50,18 @@ class DetailViewModel(private val useCase: DetailUseCase): BaseViewModel() {
     }
 
     private fun saveMovie(movie: MovieResponse) {
+        movie.isLiked = true
         disposableTask.add(useCase.saveMovie(movie).subscribe({
-//            _detailViewState.postValue(DetailViewStates.HideLoading)
             _detailViewState.postValue(DetailViewStates.SaveSuccess)
         }, {
-//            _detailViewState.postValue(DetailViewStates.HideLoading)
             _detailViewState.postValue(DetailViewStates.SaveError)
         }))
     }
 
     private fun deleteMovie(movie: MovieResponse) {
         disposableTask.addAll(useCase.removeMovie(movie).subscribe({
-//            _detailViewState.postValue(DetailViewStates.HideLoading)
             _detailViewState.postValue(DetailViewStates.RemoveSuccess)
         }, {
-//            _detailViewState.postValue(DetailViewStates.HideLoading)
             _detailViewState.postValue(DetailViewStates.RemoveError)
         }))
     }

@@ -17,5 +17,4 @@ open class DetailViewStates {
     object GetMovieError : DetailViewStates()
 
     object ShowLoading: DetailViewStates()
-    object HideLoading: DetailViewStates()
 }

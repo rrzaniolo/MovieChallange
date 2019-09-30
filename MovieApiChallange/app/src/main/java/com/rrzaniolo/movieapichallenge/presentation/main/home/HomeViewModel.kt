@@ -26,7 +26,6 @@ class HomeViewModel(private val useCase: HomeUseCase): BaseViewModel() {
                 .subscribe (
                     {
                         /* Success */
-                        _homeViewState.postValue(HomeViewState.HideLoading)
                         it.results?.also {data ->
                             _homeViewState.postValue(HomeViewState.ShowSuccess(data, genres))
                         }?:run{
@@ -35,7 +34,6 @@ class HomeViewModel(private val useCase: HomeUseCase): BaseViewModel() {
                     },
                     {
                         /* Error */
-                        _homeViewState.postValue(HomeViewState.HideLoading)
                         _homeViewState.postValue(HomeViewState.ShowError)
                     }
                 )
@@ -53,13 +51,11 @@ class HomeViewModel(private val useCase: HomeUseCase): BaseViewModel() {
                             genres = it
                             getMovies()
                         }?:run{
-                            _homeViewState.postValue(HomeViewState.HideLoading)
                             _homeViewState.postValue(HomeViewState.ShowError)
                         }
                     },
                     {
                         /* Error */
-                        _homeViewState.postValue(HomeViewState.HideLoading)
                         _homeViewState.postValue(HomeViewState.ShowError)
                     }
                 )

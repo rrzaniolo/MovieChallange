@@ -61,7 +61,6 @@ class HomeView : Fragment(), BaseRecyclerAdapter.OnItemClickListener{
                 is HomeViewState.ShowSuccess -> showSuccess(viewState.movies, viewState.genres)
                 is HomeViewState.ShowError -> showError()
                 is HomeViewState.ShowLoading -> showLoading()
-                is HomeViewState.HideLoading -> hideLoading()
             }
         })
     }

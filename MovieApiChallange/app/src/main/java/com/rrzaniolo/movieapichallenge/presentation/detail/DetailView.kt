@@ -10,7 +10,6 @@ import com.rrzaniolo.movieapichallenge.data.models.MovieResponse
 import com.rrzaniolo.movieapichallenge.di.modules.loadDetailModule
 import com.rrzaniolo.movieapichallenge.presentation.base.BaseView
 import com.rrzaniolo.movieapichallenge.presentation.base.isVisible
-import com.rrzaniolo.movieapichallenge.presentation.base.tint
 import com.rrzaniolo.movieapichallenge.presentation.base.toDate
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.view_detail.*
@@ -45,7 +44,6 @@ class DetailView: BaseView() {
     }
 
     private fun setupToolbar() {
-//        setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.title = movieData?.title
@@ -62,37 +60,22 @@ class DetailView: BaseView() {
             hideLoading()
             when(viewState){
                 is DetailViewStates.SaveSuccess -> {
-                    movieLike.setImageDrawable(
-                        ContextCompat.getDrawable(this, R.drawable.ic_like)
-                            ?.tint(R.color.colorPrimaryDark, this)
-                    )
+                    setLikeIconColor(true)
                     Toast.makeText(this, R.string.like_success, Toast.LENGTH_SHORT).show()
                 }
                 is DetailViewStates.SaveError -> {
-                    movieLike.setImageDrawable(
-                        ContextCompat.getDrawable(this, R.drawable.ic_like)
-                            ?.tint(R.color.white, this)
-                    )
+                    setLikeIconColor(false)
                     Toast.makeText(this, R.string.like_error, Toast.LENGTH_SHORT).show()
                 }
                 is DetailViewStates.ShowLoading -> {
                     showLoading()
                 }
-                is DetailViewStates.HideLoading -> {
-                    hideLoading()
-                }
                 is DetailViewStates.RemoveSuccess -> {
-                    movieLike.setImageDrawable(
-                        ContextCompat.getDrawable(this, R.drawable.ic_like)
-                            ?.tint(R.color.white, this)
-                    )
+                    setLikeIconColor(false)
                     Toast.makeText(this, R.string.unlike_success, Toast.LENGTH_SHORT).show()
                 }
                 is DetailViewStates.RemoveError -> {
-                    movieLike.setImageDrawable(
-                        ContextCompat.getDrawable(this, R.drawable.ic_like)
-                            ?.tint(R.color.white, this)
-                    )
+                   setLikeIconColor(true)
                     Toast.makeText(this, R.string.unlike_error, Toast.LENGTH_SHORT).show()
                 }
                 is DetailViewStates.GetMovieSuccess -> {
@@ -104,6 +87,15 @@ class DetailView: BaseView() {
             }
 
         })
+    }
+
+    private fun setLikeIconColor(isLiked: Boolean){
+        movieLike.setColorFilter(
+            ContextCompat.getColor(
+                this,
+                if(isLiked) R.color.colorPrimaryDark else R.color.white
+            ), android.graphics.PorterDuff.Mode.SRC_IN)
+
     }
 
     private fun showLoading(){
@@ -124,11 +116,7 @@ class DetailView: BaseView() {
 
             Picasso.get().load(BuildConfig.IMAGE_URL + this.backdropPath).into(detailBanner)
 
-            movieLike.setImageDrawable(
-                ContextCompat.getDrawable(this@DetailView, R.drawable.ic_like)
-                    ?.tint(if(this.isLiked) R.color.colorPrimaryDark else R.color.white, this@DetailView)
-            )
-
+            setLikeIconColor(isLiked)
         }
     }
 
