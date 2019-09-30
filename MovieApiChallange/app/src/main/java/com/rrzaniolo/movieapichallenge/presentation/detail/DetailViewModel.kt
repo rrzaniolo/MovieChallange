@@ -15,8 +15,7 @@ import com.rrzaniolo.movieapichallenge.presentation.base.BaseViewModel
 class DetailViewModel(private val useCase: DetailUseCase): BaseViewModel() {
 
     @Suppress("PropertyName")
-    @VisibleForTesting
-    private val _detailViewState by lazy { MutableLiveData<DetailViewStates>() }
+    @VisibleForTesting var _detailViewState = MutableLiveData<DetailViewStates>()
     val detailViewState: LiveData<DetailViewStates>
         get() = _detailViewState
 

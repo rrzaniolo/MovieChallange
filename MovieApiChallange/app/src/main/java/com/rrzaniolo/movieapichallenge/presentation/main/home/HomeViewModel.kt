@@ -14,7 +14,7 @@ import com.rrzaniolo.movieapichallenge.presentation.base.BaseViewModel
 class HomeViewModel(private val useCase: HomeUseCase): BaseViewModel() {
 
     @Suppress("PropertyName")
-    @VisibleForTesting private val _homeViewState by lazy { MutableLiveData<HomeViewState>() }
+    @VisibleForTesting var _homeViewState = MutableLiveData<HomeViewState>()
     val homeViewState: LiveData<HomeViewState>
     get() = _homeViewState
 

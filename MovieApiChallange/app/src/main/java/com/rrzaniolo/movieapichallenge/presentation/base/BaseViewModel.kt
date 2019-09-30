@@ -10,9 +10,10 @@ import io.reactivex.disposables.CompositeDisposable
  */
 abstract class BaseViewModel: ViewModel() {
 
-    @VisibleForTesting val disposableTask = CompositeDisposable()
+    @VisibleForTesting var disposableTask = CompositeDisposable()
 
-    override fun onCleared() {
+    @VisibleForTesting
+    public override fun onCleared() {
         super.onCleared()
         disposableTask.clear()
     }

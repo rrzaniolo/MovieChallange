@@ -14,7 +14,7 @@ import com.rrzaniolo.movieapichallenge.presentation.base.BaseViewModel
 class FavoriteViewModel(private val useCase: FavoriteUseCase): BaseViewModel() {
 
     @Suppress("PropertyName")
-    @VisibleForTesting private val _favoriteViewState by lazy { MutableLiveData<FavoriteViewState>() }
+    @VisibleForTesting var _favoriteViewState = MutableLiveData<FavoriteViewState>()
     val favoriteViewState: LiveData<FavoriteViewState>
     get() = _favoriteViewState
 
