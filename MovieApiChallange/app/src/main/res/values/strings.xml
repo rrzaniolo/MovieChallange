@@ -7,13 +7,13 @@
     <string name="tryAgain">Tentar novamente</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancelar</string>
+    <string name="movie_subtitle">%1$s\n%2$s</string>
 
     <!-- Main View -->
     <string name="home">Home</string>
     <string name="favorites">Favoritos</string>
 
     <!-- Home -->
-    <string name="movie_subtitle">%1$s\n%2$s</string>
 
     <!-- Detail -->
     <string name="no_overview">Desculpe, mas não foi possível encontrar a sinopse deste filme.</string>
@@ -22,4 +22,7 @@
     <string name="unlike_success">Filme excluído com sucesso.</string>
     <string name="unlike_error">Erro ao excluir o filme.</string>
     <string name="load_error">Erro ao carregar os dados do filme.</string>
+
+    <!-- Favorite -->
+    <string name="no_favorite">Você ainda não escolheu nenhum filme como favorito</string>
 </resources>

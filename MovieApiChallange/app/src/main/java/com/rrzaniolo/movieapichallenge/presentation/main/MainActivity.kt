@@ -3,6 +3,7 @@ package com.rrzaniolo.movieapichallenge.presentation.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.rrzaniolo.movieapichallenge.R
+import com.rrzaniolo.movieapichallenge.presentation.main.favorite.FavoriteView
 import com.rrzaniolo.movieapichallenge.presentation.main.home.HomeView
 import kotlinx.android.synthetic.main.view_main.*
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val tabsAdapter =
             MainTabsAdapter(this.supportFragmentManager)
         tabsAdapter.add(HomeView.newInstance(), getString(R.string.home))
-        tabsAdapter.add(HomeView.newInstance(), getString(R.string.home))
+        tabsAdapter.add(FavoriteView.newInstance(), getString(R.string.favorites))
 
         viewPager.adapter = tabsAdapter
         tabLayout.setupWithViewPager(viewPager)
